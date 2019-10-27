@@ -27,8 +27,7 @@ public class CurvatureDrive extends Command {
   protected void execute() {
     double throttle = Robot.m_oi.driveController.getLeftStickY();
     double steer = Robot.m_oi.driveController.getRightStickX();
-    boolean quickTurn = Robot.m_oi.driveController.rightBumper.get();
-    Robot.mDrive.drive(throttle, steer, quickTurn);
+    Robot.mDrive.drive(throttle, steer);
   }
 
   // Make this return true when this Command no longer needs to run execute()

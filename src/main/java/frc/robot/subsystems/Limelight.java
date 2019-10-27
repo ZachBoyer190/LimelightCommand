@@ -59,7 +59,7 @@ public class Limelight extends Subsystem {
     offComplete = true;
     return offComplete;
   }
-
+  
   public boolean limelightOn(){
     System.out.println("Off");
     ledMode.setNumber(3);
@@ -88,10 +88,11 @@ public class Limelight extends Subsystem {
            heading_error = -tx, 
            distance_error = -ty, 
            min_command = 0.0,
+           txDeadband = 1.0,
            kSteer = RobotMap.kSteerLimelight,
            kDrive = RobotMap.kDriveLimelight;
 
-    if(tx > 1.0){
+    if(tx > txDeadband){
       steer_cmd = kSteer*heading_error - min_command;
     } else if (tx < 1.0){
       steer_cmd = kSteer*heading_error + min_command;

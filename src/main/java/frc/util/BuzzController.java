@@ -9,7 +9,6 @@ public class BuzzController extends Joystick {
 
 	public BuzzController(int port) {
 		super(port);
-		// TODO Auto-generated constructor stub
 	}
 
 	public JoystickButton xButton = new JoystickButton(this, 3);

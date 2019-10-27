@@ -31,7 +31,6 @@ public enum PathfinderSequence {
         try {
             return PathfinderFRC.getTrajectory(name() + ".left");
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return null;
