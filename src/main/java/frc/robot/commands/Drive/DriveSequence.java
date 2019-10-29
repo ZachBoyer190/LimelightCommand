@@ -52,7 +52,7 @@ public class DriveSequence extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(Robot.mDrive.getPigeon().getState() != PigeonState.Ready){
+    if(Robot.mDrive.getPigeon().getState() == PigeonState.Ready){
       double leftSpeed = leftFollower.calculate(Robot.mDrive.getLeftPosition());
       double rightSpeed = rightFollower.calculate(Robot.mDrive.getRightPosition());
 
